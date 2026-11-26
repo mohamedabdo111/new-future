@@ -1,6 +1,6 @@
-# New Future Marine Services
+# Parisco Co. — Marine Services
 
-Corporate website for **New Future Marine Services Co.** — ship supply and maritime agency across Egyptian ports (Port Said, Suez Canal, Alexandria, Damietta, and more).
+Corporate website for **Parisco Co.** — ship supply and maritime agency across Egyptian ports (Port Said, Suez Canal, Alexandria, Damietta, and more).
 
 ## Tech stack
 

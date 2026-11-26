@@ -3,9 +3,10 @@ export const SITE = {
   shortName: "Parisco",
   tagline: "Marine Services & Marine Supplies",
   description:
-    "Ship supply and marine services covering Egypt's main harbors, Port Said, Suez Canal, Suez, Alexandria, Damietta, Adabiya, Safaga, and Sokhna, available 24 hours a day.",
+    "Ship chandler, husbandry agent and crew change services covering Egypt's main harbors, Port Said, Suez Canal, Suez, Alexandria, Damietta, Adabiya, Safaga, and Sokhna, available 24 hours a day.",
   email: "info@parisco-marinesupplies.com",
-  phones: ["+2 0106 208 2228"],
+  phones: ["+201062082228"],
+  whatsapp: "201062082228",
   contactPerson: "Mohab El Hlily",
   address: "Egypt — Damietta Port, Office No. 17",
   footerAddress: "Damietta Port, Office No. 17, Egypt",

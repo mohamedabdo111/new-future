@@ -9,7 +9,9 @@ import { SERVICES, BONDED_CATEGORIES } from "@/data/content";
 const SERVICE_PORTS = ["Port Said", "Suez Canal", "Suez", "Alexandria", "Damietta", "Adabiya", "Safaga", "Sokhna"] as const;
 import ourServicesHero from "@/assets/site/services-hero.webp";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, MapPin } from "lucide-react";
+import { Heading } from "@/components/shared/Heading";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/our-services")({
   head: () => ({
@@ -18,7 +20,7 @@ export const Route = createFileRoute("/our-services")({
       {
         name: "description",
         content:
-          "Port agency, galley provisions, bonded goods, safety gear, engine & deck supplies, crew rotation, diving & hull services, bunkering and Suez Canal transit support across every Egyptian port.",
+          "Port agency, galley provisions, bonded goods, safety gear, engine & deck supplies, crew change, diving & hull services, bunkering and Suez Canal transit support across every Egyptian port.",
       },
       { property: "og:title", content: "Marine Services & Supplies — Parisco Co." },
       { property: "og:description", content: "Marine support, end to end, at every Egyptian harbor — 24/7." },
@@ -38,25 +40,58 @@ function ServicesPage() {
         subtitle="From port agency to complete vessel supply, we keep your ship moving smoothly through every Egyptian harbor."
       />
 
-      <Section spacing="md">
+      <Section spacing="sm" className="pt-20 pb-16">
         <Container size="xl">
-          <AnimatedSection className="text-center mb-10">
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Ports we serve:
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-2">
-              {SERVICE_PORTS.map((p) => (
-                <span key={p} className="rounded-full bg-primary/10 px-4 py-2 text-xs font-semibold text-primary">
-                  {p}
-                </span>
-              ))}
-            </div>
+          <Heading
+            eyebrow="Where We Operate"
+            title={<>Ports <span className="text-gradient-primary">We Serve</span></>}
+            subtitle="From our head office at Damietta Port, our team covers every major Egyptian harbor, day and night."
+            className="mb-10"
+          />
+          <AnimatedSection stagger className="mx-auto grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4">
+            {SERVICE_PORTS.map((p) => {
+              const isHq = p === "Damietta";
+              return (
+                <motion.div
+                  key={p}
+                  variants={staggerItem}
+                  className={cn(
+                    "flex items-center gap-3 rounded-2xl border p-4 transition-all hover:-translate-y-0.5 hover:shadow-elegant",
+                    isHq
+                      ? "border-transparent gradient-primary text-white shadow-elegant"
+                      : "border-border/60 bg-card text-foreground shadow-soft",
+                  )}
+                >
+                  <div
+                    className={cn(
+                      "flex h-9 w-9 shrink-0 items-center justify-center rounded-xl",
+                      isHq ? "bg-white/15 text-accent" : "bg-primary/10 text-primary",
+                    )}
+                  >
+                    <MapPin className="h-4 w-4" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-semibold">{p}</span>
+                    {isHq && (
+                      <span className="text-[10px] font-semibold uppercase tracking-widest text-white/70">
+                        Head Office
+                      </span>
+                    )}
+                  </div>
+                </motion.div>
+              );
+            })}
           </AnimatedSection>
         </Container>
       </Section>
 
-      <Section tone="muted" spacing="lg">
+      <Section tone="muted" spacing="md">
         <Container size="xl">
+          <Heading
+            eyebrow="What We Offer"
+            title={<>Our <span className="text-gradient-primary">Services</span></>}
+            subtitle="Everything your vessel needs in port, handled by one team."
+          />
           <AnimatedSection stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
               <ServiceCard key={s.title} {...s} />

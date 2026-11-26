@@ -83,7 +83,7 @@ export function Hero() {
         className="absolute left-[5%] bottom-[15%] h-72 w-72 rounded-full bg-secondary/30 blur-3xl"
       />
 
-      <motion.div style={{ opacity }} className="relative flex min-h-[100svh] items-center pt-32 pb-16">
+      <motion.div style={{ opacity }} className="relative flex min-h-[100svh] items-center pt-32 pb-28 sm:pb-40">
         <Container size="xl">
           <div className="max-w-3xl">
             <motion.span
@@ -113,7 +113,7 @@ export function Hero() {
               className="mt-6 max-w-xl text-lg leading-relaxed text-white/85"
             >
               Open <span className="font-semibold text-accent">day and night</span>, we handle vessel
-              supplies, agency work, crew rotations, and canal passage at every major Egyptian port.
+              supplies, agency work, crew changes, and canal passage at every major Egyptian port.
             </motion.p>
 
             <motion.div
@@ -179,7 +179,7 @@ export function Hero() {
           aria-hidden
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="flex h-11 w-11 items-center justify-center rounded-full glass text-white"
+          className="hidden h-11 w-11 items-center justify-center rounded-full glass text-white sm:flex"
         >
           <ChevronDown className="h-5 w-5" />
         </motion.div>

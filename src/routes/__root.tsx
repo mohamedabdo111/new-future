@@ -8,6 +8,7 @@ import appCss from "../styles.css?url";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { NotFound } from "@/components/shared/NotFound";
+import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
@@ -68,6 +69,7 @@ function RootComponent() {
         <Navbar />
         <main><Outlet /></main>
         <Footer />
+        <WhatsAppButton />
       </div>
     </QueryClientProvider>
   );

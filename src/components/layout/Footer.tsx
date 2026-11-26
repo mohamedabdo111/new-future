@@ -4,6 +4,7 @@ import { Container } from "@/components/shared/Container";
 import { NAV_LINKS, SITE } from "@/constants/site";
 import { EGYPTIAN_PORTS } from "@/data/content";
 import { Logo } from "@/components/shared/Logo";
+import doLogo from "@/assets/site/do-logo.gif";
 
 export function Footer() {
   return (
@@ -56,8 +57,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:justify-between">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 border-t border-white/10 pt-6 text-center text-sm text-white/60">
           <span>© 2026 {SITE.name} All rights reserved.</span>
+          <img
+            src={doLogo}
+            alt="DO"
+            width={120}
+            height={120}
+            loading="lazy"
+            className="h-10 w-10 object-contain"
+          />
         </div>
       </Container>
     </footer>

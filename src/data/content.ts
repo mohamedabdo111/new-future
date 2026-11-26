@@ -21,7 +21,7 @@ export const EGYPTIAN_PORTS = [
 export const SERVICES = [
   {
     icon: Ship,
-    title: "Port Agency",
+    title: "Port Agency & Husbandry",
     desc: "Our on-ground team handles arrivals, paperwork, and authorities so your vessel clears quickly and departs on schedule, with every port movement tracked closely.",
     image: portAgency,
   },
@@ -51,8 +51,8 @@ export const SERVICES = [
   },
   {
     icon: Users,
-    title: "Crew Rotation",
-    desc: "We coordinate crew joining and leaving, including visas, security permits, and transport to and from the airport.",
+    title: "Crew Change",
+    desc: "We coordinate crew changes, sign-on and sign-off, including visas, security permits, and transport to and from the airport.",
     image: crewRotation,
   },
   {
@@ -109,7 +109,7 @@ export const CORE_VALUES = [
   {
     icon: Compass,
     title: "Our Mission",
-    text: "We take on challenges head-on. By adopting international quality management standards, we keep improving our services and sharpen our team's ability to answer client needs quickly and effectively, always keeping customer satisfaction at the center.",
+    text: "Fast, reliable ship supply and port services, delivered by an ISO-certified team that stays with you until delivery is signed off.",
   },
   {
     icon: Eye,

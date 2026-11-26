@@ -9,7 +9,9 @@ import { Mail, Phone, MapPin, Send, Building2, User } from "lucide-react";
 const FIELDS = [
   { name: "name", label: "Full name", type: "text", required: true },
   { name: "email", label: "Email address", type: "email", required: true },
-  { name: "subject", label: "Topic", type: "text", required: true },
+  { name: "vessel", label: "Company / Vessel name", type: "text", required: true },
+  { name: "port", label: "Port", type: "text", required: true },
+  { name: "eta", label: "ETA", type: "text", required: true },
 ] as const;
 
 interface ContactProps {
@@ -25,10 +27,12 @@ export function Contact({ showMap = false, compact = false }: ContactProps) {
         <div className="grid overflow-hidden rounded-3xl shadow-elegant lg:grid-cols-2">
           <AnimatedSection variant="slideRight" className="bg-card p-8 sm:p-12">
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">
-              Write to Us
+              Request a Quote
             </span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold">Drop Us a Line</h2>
-            <p className="mt-3 text-muted-foreground">Expect a reply within one working day.</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold">Send Your Requisition</h2>
+            <p className="mt-3 text-muted-foreground">
+              Send us your port, ETA and requisition list. We reply within one working day.
+            </p>
 
             <form
               onSubmit={(e) => { e.preventDefault(); setSent(true); }}
@@ -50,7 +54,7 @@ export function Contact({ showMap = false, compact = false }: ContactProps) {
               ))}
               <div className="flex flex-col gap-2">
                 <label htmlFor="message" className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                  Your message
+                  Requisition list / message
                 </label>
                 <textarea
                   id="message" name="message" rows={4}
@@ -59,7 +63,7 @@ export function Contact({ showMap = false, compact = false }: ContactProps) {
               </div>
               <div>
                 <CTAButton type="submit" variant="accent" withArrow>
-                  {sent ? "Message Sent" : "Submit"}
+                  {sent ? "Request Sent" : "Request a Quote"}
                 </CTAButton>
               </div>
             </form>

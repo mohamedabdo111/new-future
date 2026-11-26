@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Parisco Co. handles vessel supplies, port agency, crew rotations and Suez Canal passage at every major Egyptian port — open day and night from Damietta Port.",
+          "Parisco Co. is a ship chandler and husbandry agent handling vessel supplies, crew changes and Suez Canal passage at every major Egyptian port — open day and night from Damietta Port.",
       },
       { property: "og:title", content: "Parisco Co. — Ship Supply & Marine Services You Can Count On" },
       {

@@ -51,7 +51,7 @@ function AboutPage() {
                 A Dependable Partner for <span className="text-gradient-primary">Egypt's Harbors</span>
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                Parisco Co. provides marine services and marine supplies from its office at Damietta Port. We coordinate everything from vessel supply and agency work to crew rotations and nonstop canal transit support, so every ship gets turned around quickly and without fuss.
+                Parisco Co. provides marine services and marine supplies from its office at Damietta Port. We coordinate everything from vessel supply and husbandry agency work to crew changes and nonstop canal transit support, so every ship gets turned around quickly and without fuss.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-3">
                 {EGYPTIAN_PORTS.map((p) => (

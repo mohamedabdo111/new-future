@@ -8,9 +8,9 @@ import portImg from "@/assets/site/home-welcome.webp";
 
 const HIGHLIGHTS = [
   "Based at Damietta Port, serving harbors across Egypt",
-  "Full supply operations and canal transit assistance, day and night",
+  "Provisions, bonded stores, deck and engine stores and spare parts delivery, plus Suez Canal transit support, day and night",
   "Quality and safety certifications: ISO 9001, ISO 14001, ISO 22000, OHSAS 18001",
-  "Quick turnarounds backed by close, hands-on follow-up at the quayside",
+  "Fast turnaround, with our team at the quayside until delivery is signed off",
 ];
 
 export function About() {
@@ -45,14 +45,14 @@ export function About() {
               About Us
             </span>
             <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1]">
-              Supporting Vessels Across{" "}
-              <span className="text-gradient-primary">Egypt's Harbors</span>
+              Ship Supply and Port Services at{" "}
+              <span className="text-gradient-primary">Damietta, Port Said, Suez and Alexandria.</span>{" "}
+              24/7
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              We are a marine services company built to make a ship's time in port as short and
-              trouble-free as possible. From our office at Damietta Port, we coordinate vessel supply,
-              daily port husbandry, crew rotations, and nonstop canal transit support, so every ship
-              gets turned around quickly and without fuss.
+              Parisco is a ship supply and marine services company based at Damietta Port. We supply
+              vessels, handle daily port husbandry and crew changes, and support Suez Canal transits,
+              24 hours a day, so your ship spends less time in port.
             </p>
             <ul className="mt-8 grid gap-3">
               {HIGHLIGHTS.map((h) => (
