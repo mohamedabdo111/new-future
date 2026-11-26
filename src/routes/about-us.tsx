@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageMeta } from "@/lib/seo";
 import { Section } from "@/components/shared/Section";
 import { Container } from "@/components/shared/Container";
 import { AnimatedSection, staggerItem } from "@/components/shared/AnimatedSection";
@@ -11,19 +12,17 @@ import aboutHero from "@/assets/site/about-hero.webp";
 import { MapPin } from "lucide-react";
 
 export const Route = createFileRoute("/about-us")({
-  head: () => ({
-    meta: [
-      { title: "About Us — Parisco Co." },
-      {
-        name: "description",
-        content:
-          "Parisco Co. provides marine services and marine supplies from its office at Damietta Port, supporting vessels across every major Egyptian harbor, 24/7.",
-      },
-      { property: "og:title", content: "About Parisco Co. — Marine Services & Marine Supplies" },
-      { property: "og:description", content: "A dedicated team at Damietta Port delivering top-tier marine support at any hour." },
-      { property: "og:type", content: "website" },
-    ],
-  }),
+  head: () =>
+    pageMeta({
+      title: "About Us — Parisco Co.",
+      description:
+        "Parisco Co. provides marine services and marine supplies from its office at Damietta Port, supporting vessels across every major Egyptian harbor, 24/7.",
+      path: "/about-us",
+      image: "/og/about.jpg",
+      imageAlt: "About Parisco Co. — Marine support from Damietta Port, 24/7",
+      ogTitle: "About Parisco Co. — Marine Services & Marine Supplies",
+      ogDescription: "A dedicated team at Damietta Port delivering top-tier marine support at any hour.",
+    }),
   component: AboutPage,
 });
 

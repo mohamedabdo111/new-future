@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { pageMeta } from "@/lib/seo";
 import { Section } from "@/components/shared/Section";
 import { Container } from "@/components/shared/Container";
 import { AnimatedSection, staggerItem } from "@/components/shared/AnimatedSection";
@@ -14,19 +15,17 @@ import { Heading } from "@/components/shared/Heading";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/our-services")({
-  head: () => ({
-    meta: [
-      { title: "Our Services — Parisco Co." },
-      {
-        name: "description",
-        content:
-          "Port agency, galley provisions, bonded goods, safety gear, engine & deck supplies, crew change, diving & hull services, bunkering and Suez Canal transit support across every Egyptian port.",
-      },
-      { property: "og:title", content: "Marine Services & Supplies — Parisco Co." },
-      { property: "og:description", content: "Marine support, end to end, at every Egyptian harbor — 24/7." },
-      { property: "og:type", content: "website" },
-    ],
-  }),
+  head: () =>
+    pageMeta({
+      title: "Our Services — Parisco Co.",
+      description:
+        "Port agency, galley provisions, bonded goods, safety gear, engine & deck supplies, crew change, diving & hull services, bunkering and Suez Canal transit support across every Egyptian port.",
+      path: "/our-services",
+      image: "/og/services.jpg",
+      imageAlt: "Parisco Co. services — Marine support, end to end",
+      ogTitle: "Marine Services & Supplies — Parisco Co.",
+      ogDescription: "Marine support, end to end, at every Egyptian harbor — 24/7.",
+    }),
   component: ServicesPage,
 });
 
