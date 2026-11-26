@@ -3,21 +3,16 @@ import { Link } from "@tanstack/react-router";
 import { Container } from "@/components/shared/Container";
 import { NAV_LINKS, SITE } from "@/constants/site";
 import { EGYPTIAN_PORTS } from "@/data/content";
-import logo from "@/assets/logo/marine-services.png";
+import { Logo } from "@/components/shared/Logo";
 
 export function Footer() {
-  const year = new Date().getFullYear();
   return (
     <footer className="bg-ocean-deep text-white/80">
       <Container size="xl" className="py-16">
         <div className="grid gap-10 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex">
-              <img
-                src={logo}
-                alt={SITE.name}
-                className="h-12 w-auto object-contain"
-              />
+              <Logo tone="light" />
             </Link>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-white/60">
               {SITE.description}
@@ -33,7 +28,7 @@ export function Footer() {
               ))}
               <div className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                <span>{SITE.address}</span>
+                <span>{SITE.footerAddress}</span>
               </div>
             </div>
           </div>
@@ -62,8 +57,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:justify-between">
-          <span>© {year} {SITE.name}. All rights reserved.</span>
-          <span>Crafted for modern marine operations.</span>
+          <span>© 2026 {SITE.name} All rights reserved.</span>
         </div>
       </Container>
     </footer>

@@ -2,36 +2,19 @@ import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, ChevronLeft, ChevronRight, PlayCircle } from "lucide-react";
 import { Link } from "@tanstack/react-router";
-import heroShip from "@/assets/hero-ship.jpg";
-import portAerial from "@/assets/port-aerial.jpg";
-import bunker from "@/assets/service-bunker.jpg";
-import engine from "@/assets/service-engine.jpg";
-import crew from "@/assets/service-crew.jpg";
+import homeHero from "@/assets/site/home-hero.webp";
+import aboutHero from "@/assets/site/about-hero.webp";
+import servicesHero from "@/assets/site/services-hero.webp";
+import canalTransit from "@/assets/site/service-canal-transit.webp";
 import { Container } from "@/components/shared/Container";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { cn } from "@/lib/utils";
 
 const HERO_SLIDES = [
-  {
-    src: heroShip,
-    alt: "Cargo ship transiting the Suez Canal at sunset",
-  },
-  {
-    src: portAerial,
-    alt: "Aerial view of an Egyptian commercial port",
-  },
-  {
-    src: bunker,
-    alt: "Marine bunker and fuel supply operations",
-  },
-  {
-    src: engine,
-    alt: "Ship engine and deck store operations",
-  },
-  {
-    src: crew,
-    alt: "Crew change and maritime agency services",
-  },
+  { src: homeHero, alt: "Bulk carrier at anchor with an orange tugboat alongside" },
+  { src: aboutHero, alt: "Aerial view of a cargo vessel under way at sea" },
+  { src: servicesHero, alt: "Aerial view of a busy Egyptian commercial port" },
+  { src: canalTransit, alt: "Container ship transiting the Suez Canal with a pilot boat" },
 ] as const;
 
 const SLIDE_INTERVAL_MS = 6000;
@@ -110,7 +93,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-              Trusted Marine Partner in Egypt
+              Your Partner on the Water
             </motion.span>
 
             <motion.h1
@@ -119,8 +102,8 @@ export function Hero() {
               transition={{ delay: 0.35, duration: 0.9 }}
               className="mt-6 text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] text-white"
             >
-              Reliable Marine Supply &{" "}
-              <span className="italic text-accent">Shipping Agency</span> in Egypt
+              Ship Supply & Marine Services{" "}
+              <span className="italic text-accent">You Can Count On</span>
             </motion.h1>
 
             <motion.p
@@ -129,8 +112,8 @@ export function Hero() {
               transition={{ delay: 0.5, duration: 0.9 }}
               className="mt-6 max-w-xl text-lg leading-relaxed text-white/85"
             >
-              Services around the clock, <span className="font-semibold text-accent">24/7</span>. Full
-              ship supply, agency, crew change and Suez Canal transit across every Egyptian port.
+              Open <span className="font-semibold text-accent">day and night</span>, we handle vessel
+              supplies, agency work, crew rotations, and canal passage at every major Egyptian port.
             </motion.p>
 
             <motion.div
@@ -141,12 +124,12 @@ export function Hero() {
             >
               <Link to="/our-services">
                 <CTAButton size="lg" withArrow>
-                  Explore Services
+                  See What We Do
                 </CTAButton>
               </Link>
               <Link to="/about-us">
                 <CTAButton size="lg" variant="glass">
-                  <PlayCircle className="h-5 w-5" /> Discover Us
+                  <PlayCircle className="h-5 w-5" /> Meet the Team
                 </CTAButton>
               </Link>
             </motion.div>

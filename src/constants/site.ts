@@ -1,15 +1,16 @@
 export const SITE = {
-  name: "New Future Marine Services Co.",
-  shortName: "New Future Marine",
-  tagline: "Reliable Marine Supply & Shipping Agency in Egypt",
+  name: "Parisco Co.",
+  shortName: "Parisco",
+  tagline: "Marine Services & Marine Supplies",
   description:
-    "Premium ship supply and maritime agency across all Egyptian ports — Port Said, Suez Canal, Suez, Alexandria, Damietta, Adabiya, Safaga & Sokhna. Services around the clock, 24/7.",
-  email: "info@newfuture-marine.com",
-  phones: ["+2 01224230917", "+2 01124151415", "+2 01025216524"],
-  address:
-    "Rialto Tower, Intersection of Ougina & Al-Bazar St, 2nd Floor, Port Said, Egypt.",
+    "Ship supply and marine services covering Egypt's main harbors, Port Said, Suez Canal, Suez, Alexandria, Damietta, Adabiya, Safaga, and Sokhna, available 24 hours a day.",
+  email: "info@parisco-marinesupplies.com",
+  phones: ["+2 0106 208 2228"],
+  contactPerson: "Mohab El Hlily",
+  address: "Egypt — Damietta Port, Office No. 17",
+  footerAddress: "Damietta Port, Office No. 17, Egypt",
   mapEmbed:
-    "https://www.google.com/maps?q=Port+Said+Egypt+port&hl=en&z=13&output=embed",
+    "https://www.google.com/maps?q=Damietta+Port+Egypt&hl=en&z=13&output=embed",
 } as const;
 
 export const NAV_LINKS = [

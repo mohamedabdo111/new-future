@@ -10,9 +10,9 @@ export function Certificates() {
     <Section tone="muted" spacing="lg">
       <Container size="xl">
         <Heading
-          eyebrow="Certifications"
-          title={<>Accredited by <span className="text-gradient-primary">International Standards</span></>}
-          subtitle="We uphold globally recognized ISO management systems across quality, environment, food safety and occupational health."
+          eyebrow="Credentials"
+          title={<>Recognized Under <span className="text-gradient-primary">International Standards</span></>}
+          subtitle="We follow widely respected ISO management systems that cover quality, environment, food safety, and workplace health."
         />
         <AnimatedSection stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {CERTIFICATIONS.map((c) => (

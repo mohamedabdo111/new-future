@@ -12,12 +12,34 @@ import netlify from "@netlify/vite-plugin-tanstack-start";
 // a server build. Everywhere else (Lovable/Cloudflare builds, local dev) nothing changes.
 const isNetlify = process.env.NETLIFY === "true";
 
+// `npm run build:static` sets STATIC_BUILD=true. It prerenders every page to plain HTML
+// (dist/client) so the site can be uploaded to static hosting such as Hostinger's public_html.
+// No server deploy step runs in this mode. Normal builds (Lovable/Cloudflare, Netlify) are unchanged.
+const isStatic = process.env.STATIC_BUILD === "true";
+
 export default defineConfig({
-  nitro: isNetlify ? false : undefined,
-  plugins: isNetlify ? [netlify()] : [],
+  nitro: isNetlify || isStatic ? false : undefined,
+  plugins: isNetlify && !isStatic ? [netlify()] : [],
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    ...(isStatic && {
+      prerender: {
+        enabled: true,
+        // Every route is listed in `pages` below, so link crawling isn't needed.
+        crawlLinks: false,
+        autoSubfolderIndex: true,
+        failOnError: true,
+      },
+      pages: [
+        { path: "/" },
+        { path: "/about-us" },
+        { path: "/our-services" },
+        { path: "/get-in-touch" },
+        // Rendered by the router's notFoundComponent; served by .htaccess for unknown URLs.
+        { path: "/404", prerender: { outputPath: "/404.html" } },
+      ],
+    }),
   },
 });

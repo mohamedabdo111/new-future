@@ -6,21 +6,21 @@ import { PageHero } from "@/components/shared/PageHero";
 import { Certificates } from "@/components/sections/Certificates";
 import { CORE_VALUES, EGYPTIAN_PORTS } from "@/data/content";
 import { motion } from "framer-motion";
-import portImg from "@/assets/about-us/company-profile.png";
-import aboutHero from "@/assets/about-us/about-us-hero.png";
+import portImg from "@/assets/site/company-profile-map.webp";
+import aboutHero from "@/assets/site/about-hero.webp";
 import { MapPin } from "lucide-react";
 
 export const Route = createFileRoute("/about-us")({
   head: () => ({
     meta: [
-      { title: "About Us — New Future Marine Services Co." },
+      { title: "About Us — Parisco Co." },
       {
         name: "description",
         content:
-          "New Future Marine Services operates 4 main offices across Egypt: Port Said, Alexandria, Suez/Sokhna & Damietta — delivering full ship supply, agency and 24/7 Suez Canal transit services.",
+          "Parisco Co. provides marine services and marine supplies from its office at Damietta Port, supporting vessels across every major Egyptian harbor, 24/7.",
       },
-      { property: "og:title", content: "About New Future Marine Services Co." },
-      { property: "og:description", content: "Four offices across Egypt. Full ship supply, agency and Suez Canal transit services, 24/7." },
+      { property: "og:title", content: "About Parisco Co. — Marine Services & Marine Supplies" },
+      { property: "og:description", content: "A dedicated team at Damietta Port delivering top-tier marine support at any hour." },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -32,9 +32,9 @@ function AboutPage() {
     <>
       <PageHero
         image={aboutHero}
-        eyebrow="Who We Are"
-        title={<>About Our <span className="italic text-accent">Company</span></>}
-        subtitle="Four strategic offices across Egypt delivering premium marine services around the clock."
+        eyebrow="Get to Know Us"
+        title={<>About the <span className="italic text-accent">Company</span></>}
+        subtitle="A dedicated team at Damietta Port delivering top-tier marine support at any hour."
       />
 
       <Section spacing="lg">
@@ -42,16 +42,16 @@ function AboutPage() {
           <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
             <AnimatedSection variant="slideRight" className="relative">
               <div className="overflow-hidden rounded-3xl shadow-elegant">
-                <img src={portImg} alt="Egyptian port operations" loading="lazy" className="h-full w-full object-cover" />
+                <img src={portImg} alt="Map of Egypt marking the ports we serve" loading="lazy" className="h-full w-full object-cover" />
               </div>
             </AnimatedSection>
             <AnimatedSection variant="slideLeft">
-              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">Company Profile</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">Who We Are</span>
               <h2 className="mt-4 text-3xl sm:text-4xl font-bold leading-tight">
-                A trusted network across every <span className="text-gradient-primary">Egyptian port</span>
+                A Dependable Partner for <span className="text-gradient-primary">Egypt's Harbors</span>
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
-                New Future Marine Services Co. consists of 4 main offices located in Egypt — Port Said, Alexandria, Suez/Sokhna and Damietta. Port Said is our head office, from which we offer full ship supply services, shipping agency, crew change, and 24/7 transit services in the Suez Canal, ensuring a fast and efficient turnaround for ships.
+                Parisco Co. provides marine services and marine supplies from its office at Damietta Port. We coordinate everything from vessel supply and agency work to crew rotations and nonstop canal transit support, so every ship gets turned around quickly and without fuss.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-3">
                 {EGYPTIAN_PORTS.map((p) => (
@@ -69,9 +69,9 @@ function AboutPage() {
       <Section tone="muted" spacing="lg">
         <Container size="xl">
           <AnimatedSection className="text-center mb-14">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">Values & Vision</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">What Drives Us</span>
             <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold">
-              Guided by <span className="text-gradient-primary">Purpose</span>
+              Built on Clear <span className="text-gradient-primary">Purpose</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection stagger className="grid gap-6 md:grid-cols-2">

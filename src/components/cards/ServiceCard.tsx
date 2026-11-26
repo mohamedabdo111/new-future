@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { staggerItem } from "@/components/shared/AnimatedSection";
+
+export const serviceSlug = (title: string) =>
+  title.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -15,7 +19,8 @@ export function ServiceCard({ icon: Icon, title, desc, image }: ServiceCardProps
     <motion.article
       variants={staggerItem}
       whileHover={{ y: -6 }}
-      className="group relative flex flex-col overflow-hidden rounded-3xl bg-card shadow-soft transition-shadow hover:shadow-elegant"
+      id={serviceSlug(title)}
+      className="group relative flex scroll-mt-40 flex-col overflow-hidden rounded-3xl bg-card shadow-soft transition-shadow hover:shadow-elegant"
     >
       <div className="relative h-56 overflow-hidden">
         <img
@@ -32,9 +37,13 @@ export function ServiceCard({ icon: Icon, title, desc, image }: ServiceCardProps
       <div className="flex flex-1 flex-col gap-3 p-6">
         <h3 className="text-xl font-bold text-foreground">{title}</h3>
         <p className="text-sm leading-relaxed text-muted-foreground">{desc}</p>
-        <div className="mt-2 flex items-center gap-1.5 text-sm font-semibold text-secondary opacity-0 transition-opacity group-hover:opacity-100">
-          Learn more <ArrowUpRight className="h-4 w-4" />
-        </div>
+        <Link
+          to="/our-services"
+          hash={serviceSlug(title)}
+          className="mt-auto inline-flex w-fit items-center gap-1.5 pt-2 text-sm font-semibold text-secondary transition-colors hover:text-accent"
+        >
+          Details <ArrowUpRight className="h-4 w-4" />
+        </Link>
       </div>
     </motion.article>
   );

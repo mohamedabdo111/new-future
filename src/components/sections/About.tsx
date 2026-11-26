@@ -4,13 +4,13 @@ import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { CheckCircle2, Anchor } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { CTAButton } from "@/components/shared/CTAButton";
-import portImg from "@/assets/welcome.png";
+import portImg from "@/assets/site/home-welcome.webp";
 
 const HIGHLIGHTS = [
-  "4 main offices across Egypt: Port Said, Alexandria, Suez/Sokhna & Damietta",
-  "24/7 Suez Canal transit and full ship supply services",
-  "ISO 9001, 14001, 22000 & OHSAS 18001 certified",
-  "Fast, efficient turnaround with meticulous port follow-up",
+  "Based at Damietta Port, serving harbors across Egypt",
+  "Full supply operations and canal transit assistance, day and night",
+  "Quality and safety certifications: ISO 9001, ISO 14001, ISO 22000, OHSAS 18001",
+  "Quick turnarounds backed by close, hands-on follow-up at the quayside",
 ];
 
 export function About() {
@@ -22,10 +22,10 @@ export function About() {
             <div className="relative overflow-hidden rounded-3xl shadow-elegant">
               <img
                 src={portImg}
-                alt="Panoramic view of Port Said commercial harbor"
+                alt="Crew receiving supplies by crane net from a supply boat alongside the ship"
                 loading="lazy"
-                width={1600}
-                height={1000}
+                width={1200}
+                height={900}
                 className="h-full w-full object-cover"
               />
             </div>
@@ -35,24 +35,24 @@ export function About() {
               </div>
               <div>
                 <div className="text-2xl font-bold text-primary">24/7</div>
-                <div className="text-xs text-muted-foreground uppercase tracking-widest">Around the Clock</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-widest">Open 24/7</div>
               </div>
             </div>
           </AnimatedSection>
 
           <AnimatedSection variant="slideLeft">
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">
-              Welcome
+              About Us
             </span>
             <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.1]">
-              Your Premium Partner in{" "}
-              <span className="text-gradient-primary">Egyptian Ports</span>
+              Supporting Vessels Across{" "}
+              <span className="text-gradient-primary">Egypt's Harbors</span>
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Welcome to New Future Marine Services. We are your premium partner in Egyptian ports,
-              offering extensive ship supply and maritime agency services. Port Said is home to our
-              head office, providing full supply, husbandry, crew change and 24/7 Suez Canal transit
-              for fast and efficient vessel turnaround.
+              We are a marine services company built to make a ship's time in port as short and
+              trouble-free as possible. From our office at Damietta Port, we coordinate vessel supply,
+              daily port husbandry, crew rotations, and nonstop canal transit support, so every ship
+              gets turned around quickly and without fuss.
             </p>
             <ul className="mt-8 grid gap-3">
               {HIGHLIGHTS.map((h) => (
@@ -64,7 +64,7 @@ export function About() {
             </ul>
             <div className="mt-8">
               <Link to="/about-us">
-                <CTAButton withArrow>Learn About Us</CTAButton>
+                <CTAButton withArrow>Our Story</CTAButton>
               </Link>
             </div>
           </AnimatedSection>

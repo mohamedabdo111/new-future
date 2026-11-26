@@ -7,7 +7,7 @@ import { NAV_LINKS } from "@/constants/site";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { Container } from "@/components/shared/Container";
 import { TopHeader } from "@/components/layout/TopHeader";
-import logo from "@/assets/logo/marine-services.png";
+import { Logo } from "@/components/shared/Logo";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,11 +37,7 @@ export function Navbar() {
         <Container size="xl">
           <div className="flex items-center justify-between gap-6">
             <Link to="/" className="flex items-center shrink-0">
-              <img
-                src={logo}
-                alt="New Future Marine Services Co."
-                className="h-10 sm:h-12 w-auto object-contain"
-              />
+              <Logo />
             </Link>
 
             <nav className="hidden lg:flex items-center gap-1">
@@ -61,7 +57,7 @@ export function Navbar() {
 
             <div className="hidden lg:block">
               <Link to="/get-in-touch">
-                <CTAButton variant="primary" size="sm">Get a Quote</CTAButton>
+                <CTAButton variant="primary" size="sm">Request a Quote</CTAButton>
               </Link>
             </div>
 
@@ -94,7 +90,7 @@ export function Navbar() {
                     </Link>
                   ))}
                   <Link to="/get-in-touch" onClick={() => setOpen(false)}>
-                    <CTAButton className="mt-2 w-full" size="sm">Get a Quote</CTAButton>
+                    <CTAButton className="mt-2 w-full" size="sm">Request a Quote</CTAButton>
                   </Link>
                 </div>
               </motion.nav>

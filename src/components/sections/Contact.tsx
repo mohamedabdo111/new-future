@@ -4,12 +4,12 @@ import { Container } from "@/components/shared/Container";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { SITE } from "@/constants/site";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Building2, User } from "lucide-react";
 
 const FIELDS = [
-  { name: "name", label: "Your name", type: "text", required: true },
-  { name: "email", label: "Your email", type: "email", required: true },
-  { name: "subject", label: "Subject", type: "text", required: true },
+  { name: "name", label: "Full name", type: "text", required: true },
+  { name: "email", label: "Email address", type: "email", required: true },
+  { name: "subject", label: "Topic", type: "text", required: true },
 ] as const;
 
 interface ContactProps {
@@ -25,10 +25,10 @@ export function Contact({ showMap = false, compact = false }: ContactProps) {
         <div className="grid overflow-hidden rounded-3xl shadow-elegant lg:grid-cols-2">
           <AnimatedSection variant="slideRight" className="bg-card p-8 sm:p-12">
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">
-              Contact Us
+              Write to Us
             </span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold">Send us a message</h2>
-            <p className="mt-3 text-muted-foreground">We'll get back within one business day.</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold">Drop Us a Line</h2>
+            <p className="mt-3 text-muted-foreground">Expect a reply within one working day.</p>
 
             <form
               onSubmit={(e) => { e.preventDefault(); setSent(true); }}
@@ -59,7 +59,7 @@ export function Contact({ showMap = false, compact = false }: ContactProps) {
               </div>
               <div>
                 <CTAButton type="submit" variant="accent" withArrow>
-                  {sent ? "Message Sent" : "Send Message"}
+                  {sent ? "Message Sent" : "Submit"}
                 </CTAButton>
               </div>
             </form>
@@ -68,13 +68,15 @@ export function Contact({ showMap = false, compact = false }: ContactProps) {
           <AnimatedSection variant="slideLeft" className="relative gradient-primary p-8 sm:p-12 text-white overflow-hidden">
             <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-accent/20 blur-3xl" />
             <span className="relative text-xs font-semibold uppercase tracking-[0.25em] text-accent">
-              Get in touch
+              Find Us
             </span>
             <h3 className="relative mt-3 text-3xl sm:text-4xl font-bold leading-tight">
-              Contact our<br />team today
+              Speak with<br />Us Today
             </h3>
 
             <div className="relative mt-8 flex flex-col gap-5">
+              <ContactRow icon={<Building2 />} label={`${SITE.name} — ${SITE.tagline}`} />
+              <ContactRow icon={<User />} label={SITE.contactPerson} />
               <ContactRow icon={<MapPin />} label={SITE.address} />
               <ContactRow icon={<Mail />} label={SITE.email} href={`mailto:${SITE.email}`} />
               {SITE.phones.map((p) => (
@@ -84,7 +86,7 @@ export function Contact({ showMap = false, compact = false }: ContactProps) {
 
             <div className="relative mt-8 flex items-center gap-3 text-sm text-white/70">
               <Send className="h-4 w-4" />
-              <span>Available 24/7 · All timezones</span>
+              <span>Reachable around the clock, in any time zone</span>
             </div>
           </AnimatedSection>
         </div>
@@ -92,7 +94,7 @@ export function Contact({ showMap = false, compact = false }: ContactProps) {
         {showMap && (
           <AnimatedSection className="mt-10 overflow-hidden rounded-3xl shadow-elegant border border-border">
             <iframe
-              title="Office location — Port Said"
+              title="Office location — Damietta Port"
               src={SITE.mapEmbed}
               className="h-[420px] w-full"
               loading="lazy"

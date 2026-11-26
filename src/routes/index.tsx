@@ -10,17 +10,16 @@ import { Testimonials } from "@/components/sections/Testimonials";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "New Future Marine Services Co. — Marine Supply & Shipping Agency in Egypt" },
+      { title: "Parisco Co. — Ship Supply & Marine Services in Egypt" },
       {
         name: "description",
         content:
-          "Reliable ship supply and maritime agency across all Egyptian ports — Port Said, Suez, Alexandria, Damietta and more. 24/7 Suez Canal transit and full ship supply services.",
+          "Parisco Co. handles vessel supplies, port agency, crew rotations and Suez Canal passage at every major Egyptian port — open day and night from Damietta Port.",
       },
-      { property: "og:title", content: "New Future Marine Services Co. — Marine Supply & Shipping Agency in Egypt" },
+      { property: "og:title", content: "Parisco Co. — Ship Supply & Marine Services You Can Count On" },
       {
         property: "og:description",
-        content:
-          "Premium ship supply, agency and crew change services across every Egyptian port, around the clock.",
+        content: "Marine services and marine supplies across Egypt's main harbors, 24/7.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/shared/PageHero";
 import { Contact } from "@/components/sections/Contact";
-import aboutHero from "@/assets/contact-us.png";
+import contactHero from "@/assets/site/contact-hero.webp";
 
 export const Route = createFileRoute("/get-in-touch")({
   head: () => ({
     meta: [
-      { title: "Contact Us — New Future Marine Services Co." },
+      { title: "Contact Us — Parisco Co." },
       {
         name: "description",
         content:
-          "Get in touch with New Future Marine Services. Head office at Rialto Tower, Port Said, Egypt. Available 24/7 for ship supply, agency and Suez Canal transit.",
+          "Reach Parisco Co. at Damietta Port, Office No. 17, Egypt. On call day and night for ship supply, port agency and Suez Canal transit support.",
       },
-      { property: "og:title", content: "Contact New Future Marine Services Co." },
-      { property: "og:description", content: "Reach our team 24/7 for marine supply and agency services in Egypt." },
+      { property: "og:title", content: "Contact Parisco Co." },
+      { property: "og:description", content: "We're on call day and night at every Egyptian port." },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -24,10 +24,10 @@ function ContactPage() {
   return (
     <>
       <PageHero
-        image={aboutHero}
-        eyebrow="Contact"
-        title={<>Contact Our <span className="italic text-accent">Team</span></>}
-        subtitle="We're available 24/7 across every Egyptian port. Reach out for quotes, coordination or support."
+        image={contactHero}
+        eyebrow="Let's Talk"
+        title={<>Reach Out to <span className="italic text-accent">Our Team</span></>}
+        subtitle="We're on call day and night at every Egyptian port. Write to us for pricing, planning, or any support your vessel needs."
       />
       <Contact showMap />
     </>

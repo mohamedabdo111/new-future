@@ -10,9 +10,9 @@ export function Services() {
     <Section id="services" tone="muted" spacing="lg">
       <Container size="xl">
         <Heading
-          eyebrow="What We Do"
-          title={<>Comprehensive <span className="text-gradient-primary">Marine Services</span></>}
-          subtitle="From bow to stern, port to port — a complete suite of services designed to keep your fleet moving efficiently."
+          eyebrow="Our Offer"
+          title={<>A Full Range of <span className="text-gradient-primary">Marine Solutions</span></>}
+          subtitle="From the bow to the engine room and from one port to the next, everything your fleet needs under one roof."
         />
         <AnimatedSection stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => (

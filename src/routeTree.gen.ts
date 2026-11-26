@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as R404RouteImport } from './routes/404'
 import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as GetInTouchRouteImport } from './routes/get-in-touch'
 import { Route as OurServicesRouteImport } from './routes/our-services'
@@ -17,6 +18,11 @@ import { Route as OurServicesRouteImport } from './routes/our-services'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const R404Route = R404RouteImport.update({
+  id: '/404',
+  path: '/404',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutUsRoute = AboutUsRouteImport.update({
@@ -37,12 +43,14 @@ const OurServicesRoute = OurServicesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/404': typeof R404Route
   '/about-us': typeof AboutUsRoute
   '/get-in-touch': typeof GetInTouchRoute
   '/our-services': typeof OurServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/404': typeof R404Route
   '/about-us': typeof AboutUsRoute
   '/get-in-touch': typeof GetInTouchRoute
   '/our-services': typeof OurServicesRoute
@@ -50,20 +58,23 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/404': typeof R404Route
   '/about-us': typeof AboutUsRoute
   '/get-in-touch': typeof GetInTouchRoute
   '/our-services': typeof OurServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about-us' | '/get-in-touch' | '/our-services'
+  fullPaths: '/' | '/404' | '/about-us' | '/get-in-touch' | '/our-services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about-us' | '/get-in-touch' | '/our-services'
-  id: '__root__' | '/' | '/about-us' | '/get-in-touch' | '/our-services'
+  to: '/' | '/404' | '/about-us' | '/get-in-touch' | '/our-services'
+  id:
+    '__root__' | '/' | '/404' | '/about-us' | '/get-in-touch' | '/our-services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  R404Route: typeof R404Route
   AboutUsRoute: typeof AboutUsRoute
   GetInTouchRoute: typeof GetInTouchRoute
   OurServicesRoute: typeof OurServicesRoute
@@ -76,6 +87,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/404': {
+      id: '/404'
+      path: '/404'
+      fullPath: '/404'
+      preLoaderRoute: typeof R404RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about-us': {
@@ -104,6 +122,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  R404Route: R404Route,
   AboutUsRoute: AboutUsRoute,
   GetInTouchRoute: GetInTouchRoute,
   OurServicesRoute: OurServicesRoute,
