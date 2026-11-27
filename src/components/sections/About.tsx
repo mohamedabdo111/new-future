@@ -7,8 +7,8 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import portImg from "@/assets/site/home-welcome.webp";
 
 const HIGHLIGHTS = [
-  "Based at Damietta Port, serving harbors across Egypt",
-  "Provisions, bonded stores, deck and engine stores and spare parts delivery, plus Suez Canal transit support, day and night",
+  "Since 1986, based at Damietta Port and serving harbors across Egypt",
+  "Provisions, bonded stores, deck and engine stores, fresh water and spare parts delivery, plus Suez Canal transit support, day and night",
   "Quality and safety certifications: ISO 9001, ISO 14001, ISO 22000, OHSAS 18001",
   "Fast turnaround, with our team at the quayside until delivery is signed off",
 ];

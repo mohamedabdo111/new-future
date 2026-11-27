@@ -63,8 +63,8 @@ export const SERVICES = [
   },
   {
     icon: Fuel,
-    title: "Bunkering & Lubricants",
-    desc: "Dependable fuel and lubricant supply at all Egyptian ports, offered at competitive prices.",
+    title: "Bunkering, Lubricants & Fresh Water",
+    desc: "Dependable fuel, lubricant and fresh water supply at all Egyptian ports, offered at competitive prices.",
     image: bunkering,
   },
   {
@@ -85,7 +85,7 @@ export const BONDED_CATEGORIES = [
 ] as const;
 
 export const STATS = [
-  { value: 25, suffix: "+", label: "Years of Excellence", icon: Award },
+  { value: new Date().getFullYear() - 1986, suffix: "+", label: "Years of Experience", icon: Award },
   { value: 4800, suffix: "+", label: "Vessels Served", icon: Ship },
   { value: 8, suffix: "", label: "Egyptian Ports", icon: Globe2 },
   { value: 24, suffix: "/7", label: "Operations", icon: Clock },
@@ -115,23 +115,5 @@ export const CORE_VALUES = [
     icon: Eye,
     title: "Our Vision",
     text: "To be the first choice for ship supply in Egyptian ports, growing step by step with partners wherever our clients call.",
-  },
-] as const;
-
-export const TESTIMONIALS = [
-  {
-    name: "Captain James Whitaker",
-    role: "Master, MV Northern Star",
-    quote: "Parisco's team turned around our Port Said call in half the expected time. Impeccable coordination and quality provisions.",
-  },
-  {
-    name: "Anna Krüger",
-    role: "Operations Director, Neptune Shipping",
-    quote: "Their reliability across every Egyptian port is unmatched. We consider them a true extension of our fleet operations.",
-  },
-  {
-    name: "Rajiv Menon",
-    role: "Fleet Manager, Trident Tankers",
-    quote: "From bunker fuel to underwater services, one call handles everything — rare in this industry.",
   },
 ] as const;

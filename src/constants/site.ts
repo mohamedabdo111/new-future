@@ -2,6 +2,8 @@ export const SITE = {
   name: "Parisco Co.",
   shortName: "Parisco",
   url: "https://parisco-marinesupplies.com",
+  founded: 1986,
+  registration: "10E9j",
   tagline: "Marine Services & Marine Supplies",
   description:
     "Ship chandler, husbandry agent and crew change services covering Egypt's main harbors, Port Said, Suez Canal, Suez, Alexandria, Damietta, Adabiya, Safaga, and Sokhna, available 24 hours a day.",

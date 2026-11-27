@@ -4,7 +4,7 @@ import { Container } from "@/components/shared/Container";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { SITE } from "@/constants/site";
-import { Mail, Phone, MapPin, Send, Building2, User } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Building2, User, FileCheck2 } from "lucide-react";
 
 const FIELDS = [
   { name: "name", label: "Full name", type: "text", required: true },
@@ -31,7 +31,7 @@ export function Contact({ showMap = false, compact = false }: ContactProps) {
             </span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold">Send Your Requisition</h2>
             <p className="mt-3 text-muted-foreground">
-              Send us your port, ETA and requisition list. We reply within one working day.
+              Send us your port, ETA and requisition list. We reply within 6 hours.
             </p>
 
             <form
@@ -81,6 +81,7 @@ export function Contact({ showMap = false, compact = false }: ContactProps) {
             <div className="relative mt-8 flex flex-col gap-5">
               <ContactRow icon={<Building2 />} label={`${SITE.name} — ${SITE.tagline}`} />
               <ContactRow icon={<User />} label={SITE.contactPerson} />
+              <ContactRow icon={<FileCheck2 />} label={`Commercial Registration & License No. ${SITE.registration}`} />
               <ContactRow icon={<MapPin />} label={SITE.address} />
               <ContactRow icon={<Mail />} label={SITE.email} href={`mailto:${SITE.email}`} />
               {SITE.phones.map((p) => (

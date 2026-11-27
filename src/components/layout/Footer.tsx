@@ -58,7 +58,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 border-t border-white/10 pt-6 text-center text-sm text-white/60">
-          <span>© 2026 {SITE.name} All rights reserved.</span>
+          <span>© 2026 {SITE.name} All rights reserved. · C.R. &amp; License No. {SITE.registration}</span>
           <img
             src={doLogo}
             alt="DO"
