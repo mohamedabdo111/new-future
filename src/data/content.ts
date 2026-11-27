@@ -114,7 +114,7 @@ export const CORE_VALUES = [
   {
     icon: Eye,
     title: "Our Vision",
-    text: "We want to be the partner that supports your fleet wherever it sails. To get there, we are steadily growing our network of partners and offices in the major ports along global shipping lanes.",
+    text: "To be the first choice for ship supply in Egyptian ports, growing step by step with partners wherever our clients call.",
   },
 ] as const;
 

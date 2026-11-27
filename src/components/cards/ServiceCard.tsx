@@ -39,7 +39,7 @@ export function ServiceCard({ title, desc, image }: ServiceCardProps) {
           hash={serviceSlug(title)}
           className="mt-auto inline-flex w-fit items-center gap-1.5 pt-2 text-sm font-semibold text-secondary transition-colors hover:text-accent"
         >
-          Details <ArrowUpRight className="h-4 w-4" />
+          {/* Details <ArrowUpRight className="h-4 w-4" /> */}
         </Link>
       </div>
     </motion.article>
